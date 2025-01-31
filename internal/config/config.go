@@ -9,7 +9,8 @@ import (
 )
 
 type HTTPServer struct {
-	Address string
+	Address string `yaml:"address" env-required:"true"`
+	Timeout int    `yaml:"timeout" env-required:"true" env-default:"5"`
 }
 
 type Config struct {
